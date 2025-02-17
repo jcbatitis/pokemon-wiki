@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+
+echo "\n\n"
+echo "----------------------------------------"
+echo "PRE-COMMIT HOOK RUNNING"
+echo "----------------------------------------"
+echo "RUNNING PRETTIER + ESLINT"
+npx lint-staged --allow-empty
+
+# Uncomment this once test suite has been added to project
+# echo "\n\n"
+# echo "----------------------------------------"
+# echo "RUNNING TESTS"
+# echo "----------------------------------------"
+# npm run test
